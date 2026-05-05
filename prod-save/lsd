@@ -1,0 +1,1 @@
+python /LinuxShowDirector/prod/main.py $1
