@@ -15,8 +15,13 @@ class main:
 			raise Exception("unkown file type")
 		self.file = open(sys.argv[1]).read().replace("\n","").split("<>")
 		self.path = os.getcwd()
+		if not os.path.exists(self.path + "/temp"):
+			os.mkdir(self.path + "/temp")
 		os.system("python " + self.path + "/display.py &")
-		pid = open(self.path + "/pid","r")
+		pidPath = self.path + "/temp/pid"
+		if not os.path.exists(pidPath):
+			open(pidPath, "x")
+		pid = open(pidPath,"r")
 		self.pid = pid.read()
 		os.system("stty -echo")
 		if len(self.file) > 0:
@@ -42,5 +47,8 @@ class main:
 			if len(self.file) > 0:
 				self.next()
 	def next(self):
-		os.system("echo '" + self.file.pop(0) + "' > " + self.path + "/in")
+		inPath = self.path + "/temp/in"
+		if not os.path.exists(inPath):
+			open(inPath, "x")
+		os.system("echo '" + self.file.pop(0) + "' > " + inPath)
 main = main().loop() 
