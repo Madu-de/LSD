@@ -203,7 +203,7 @@ display.init()
 display.init_shader()
 os.system('echo "' + str(os.getpid()) + '" > ' + display.path + '/temp/pid &')
 display.write()
+vin = open(display.path + "/temp/in", "r")
 run = True
 while run:
-	vin = open(display.path + "/temp/in", "r")
 	display.exec(vin.read())

@@ -2,12 +2,14 @@ import time
 import sys
 import os
 import select
+import platform
 
 class main:
 	file = None
 	pid = None
 	path = None
 	def __init__(self):
+		self.killWindows()
 		self.run = True
 		self.frames = 60
 		self.frame_list = []
@@ -51,4 +53,8 @@ class main:
 		if not os.path.exists(inPath):
 			open(inPath, "x")
 		os.system("echo '" + self.file.pop(0) + "' > " + inPath)
+	def killWindows():
+		if platform.system() == "Windows":
+			print("Use a better OS (https://wiki.archlinux.org/title/Installation_guide)")
+			exit()
 main = main().loop() 
