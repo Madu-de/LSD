@@ -53,7 +53,7 @@ class main:
 		if not os.path.exists(inPath):
 			open(inPath, "x")
 		os.system("echo '" + self.file.pop(0) + "' > " + inPath)
-	def killWindows():
+	def killWindows(self):
 		if platform.system() == "Windows":
 			print("Use a better OS (https://wiki.archlinux.org/title/Installation_guide)")
 			exit()
