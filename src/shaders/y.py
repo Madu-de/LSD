@@ -1,6 +1,6 @@
 import key 
 
-class y_shader(key.key_shader): 
+class YShader(key.KeyShader): 
 	def __init__(self,display):
 		def shader(self,x,y,scale):
 			display.set_line(x, y, x, y - 0.1*scale,0,"|")

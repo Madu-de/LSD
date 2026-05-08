@@ -11,17 +11,13 @@ Step by step introduction:
     ```bash
     pacman -S python # https://wiki.archlinux.org/title/Python
     ```
-- Change Directory to src
-    ```bash
-    cd src
-    ```
 - Make lsd executable
     ```bash
     sudo chmod +x lsd
     ```
 - Run lsd
     ```bash
-    lsd ../examples/presentation.lsd
+    ./lsd ./examples/presentation.lsd
     ```
 
 ## Contributors

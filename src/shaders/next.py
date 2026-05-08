@@ -1,6 +1,6 @@
 import animation
 
-class next_shader(animation.animation):
+class NextShader(animation.AnimationShader):
 	def __init__(self,display):
 		def shader(self,x,y,progress):
 			self.display.set_layer(0)

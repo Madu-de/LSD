@@ -1,16 +1,17 @@
 import animation
 import random
+from colors import *
 
-class lsd_shader(animation.animation):
-	def __init__(self,display):
-		def shader(self,x,y,progress,width,height,scale=1,full=False):
+class LSDShader(animation.AnimationShader):
+	def __init__(self, display):
+		def shader(self, x, y, progress, width, height, scale=1, full=False):
 			width /= 2
 			width *= scale
 			height /= 2
 			height *= scale
 			range_x = self.display.range(self.display.translate_x(x - width), self.display.translate_x(x + width))
 			range_y = self.display.range(self.display.translate_y(y + height), self.display.translate_y(y - height))
-			keys = [*self.display.colors.keys()]
+			keys = [*colors.keys()]
 			for y in range_y:
 				for x in range_x:
 					color1 = keys[int((len(keys)-1)*random.random())]

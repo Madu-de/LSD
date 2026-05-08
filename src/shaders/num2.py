@@ -1,6 +1,6 @@
 import key 
 
-class i2_shader(key.key_shader): 
+class Num2Shader(key.KeyShader): 
 	def __init__(self,display):
 		def shader(self,x,y,scale):
 			display.set_line(x - 0.1*scale, y + 0.1*scale, x + 0.1*scale, y + 0.05*scale,0,"\\")

@@ -1,9 +1,9 @@
 import shader
 
-class box_shader(shader.shader):
-	def __init__(self,display):
-		def shader(self,x,y,width,height,layer,scale=1):
-			self.display.shaders["change_color"].run(x,y,width,height,layer,scale)
+class BoxShader(shader.Shader):
+	def __init__(self, display):
+		def shader(self, x, y, width, height, layer, scale=1):
+			self.display.shaders["change_color"].run(x, y, width, height, layer, scale)
 			self.display.set_layer(layer)
 			width /= 2
 			width *= scale

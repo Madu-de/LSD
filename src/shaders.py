@@ -1,45 +1,50 @@
-import a
-import b 
-import c 
-import d 
-import e
-import f
-import g
-import h
-import i
-import j
-import k
-import l
-import m
-import n
-import o
-import p
-import q
-import r
-import s
-import t
-import u
-import v
-import w
-import x
-import y
-import z
-import i1
-import i2
-import i3
-import i4
-import i5
-import i6
-import i7
-import i8
-import i9
-import i0
-import dot
-import text
-import color
-import box
-import change_color
-import lsd
-import stop_a
-import next
-import clear
+import sys
+import os
+from helper import getSrcDirectory
+sys.path.append(os.path.join(getSrcDirectory(), "shaders"))
+
+from a import *
+from b import *
+from c import *
+from d import *
+from e import *
+from f import *
+from g import *
+from h import *
+from i import *
+from j import *
+from k import *
+from l import *
+from m import *
+from n import *
+from o import *
+from p import *
+from q import *
+from r import *
+from s import *
+from t import *
+from u import *
+from v import *
+from w import *
+from x import *
+from y import *
+from z import *
+from num0 import *
+from num1 import *
+from num2 import *
+from num3 import *
+from num4 import *
+from num5 import *
+from num6 import *
+from num7 import *
+from num8 import *
+from num9 import *
+from dot import *
+from text import *
+from color import *
+from box import *
+from change_color import *
+from lsd import *
+from stop_a import *
+from next import *
+from clear import *

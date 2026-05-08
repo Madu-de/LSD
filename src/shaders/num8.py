@@ -1,6 +1,6 @@
 import key 
 
-class i8_shader(key.key_shader): 
+class Num8Shader(key.KeyShader): 
 	def __init__(self,display):
 		def shader(self,x,y,scale):
 			display.set_line(x - 0.1*scale, y + 0.05*scale, x, y + 0.1*scale,0,"/")
