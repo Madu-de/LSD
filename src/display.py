@@ -206,6 +206,8 @@ class Display:
                 temp += i.split("<>")
             inst = temp
             for i in inst:
+                if i == "":
+                    continue
                 temp = i.replace("[", "<>[").split("<>")
                 display.shaders[temp[0]].run(*eval(temp[1]))
         for i in display.animations:

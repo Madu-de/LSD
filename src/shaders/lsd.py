@@ -1,7 +1,6 @@
 from .animation import AnimationShader
-import random
+from random import random
 from colors import *
-
 
 class LSDShader(AnimationShader):
     def __init__(self, display):
@@ -23,8 +22,8 @@ class LSDShader(AnimationShader):
             keys = [*colors.keys()]
             for y in range_y:
                 for x in range_x:
-                    color1 = keys[int((len(keys) - 1) * random.random())]
-                    color2 = keys[int((len(keys) - 1) * random.random())]
+                    color1 = keys[int((len(keys) - 1) * random())]
+                    color2 = keys[int((len(keys) - 1) * random())]
                     if full:
                         self.display.set_color(color1, color2)
                     else:
